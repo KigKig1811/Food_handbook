@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity"
+    android:orientation="vertical"
+    android:weightSum="6"
+    android:id="@+id/main"
+    android:background="#F1EEEE"
+    >
+    <SearchView
+        android:layout_weight="1"
+        android:id="@+id/searchView"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_radius"
+        />
+    <LinearLayout
+        android:layout_weight="4"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycelerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            tools:listitem="@layout/item_catelogys" />
+
+    </LinearLayout>
+    <ImageButton
+
+        android:layout_weight="1"
+        android:id="@+id/imageView"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"/>
+
+
+
+</LinearLayout>
